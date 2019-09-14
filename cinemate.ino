@@ -67,30 +67,6 @@ void setup()
     digitalWrite(OutputPin, HIGH);
 }
 
-void loop() {
-    sendNEC(0x5D0532CD, 32);
-    delay(5000);
-}
-
-void sendNEC(unsigned long data, int nbits) {
-    mark(NEC_HDR_MARK);
-    space(NEC_HDR_SPACE);
-
-    for (int i = 0; i < nbits; i++) {
-        if (data & TOPBIT) {
-            mark(NEC_BIT_MARK);
-            space(NEC_ONE_SPACE);
-        }
-        else {
-            mark(NEC_BIT_MARK);
-            space(NEC_ZERO_SPACE);
-        }
-        data <<= 1;
-    }
-    mark(NEC_BIT_MARK);
-    space(0);
-}
-
 void mark(int time) {
     digitalWrite(OutputPin, LOW);
     delayMicroseconds(time);
@@ -99,4 +75,28 @@ void mark(int time) {
 void space(int time) {
     digitalWrite(OutputPin, HIGH);
     delayMicroseconds(time);
+}
+
+void sendNEC(unsigned long data) {
+    mark(NEC_HDR_MARK);
+    space(NEC_HDR_SPACE);
+
+    for (int i = 0; i < 32; i++) {
+        if (data & TOPBIT) {
+            mark(NEC_BIT_MARK);
+            space(NEC_ONE_SPACE);
+        }
+        else {
+            mark(NEC_BIT_MARK);
+            space(NEC_ZERO_SPACE);
+        }
+        data <<= (uint8_t) 1;
+    }
+    mark(NEC_BIT_MARK);
+    space(0);
+}
+
+void loop() {
+    sendNEC(0x5D0532CD);
+    delay(5000);
 }
