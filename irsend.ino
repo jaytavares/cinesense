@@ -48,55 +48,55 @@
 //
 //IRsend irsend;
 
-
-// pulse parameters in usec
-#define NEC_HDR_MARK  9000
-#define NEC_HDR_SPACE 4500
-#define NEC_BIT_MARK  560
-#define NEC_ONE_SPACE 1600
-#define NEC_ZERO_SPACE  560
-#define NEC_RPT_SPACE 2250
-
-#define TOPBIT 0x80000000
-
-const int OutputPin = 13;
-
-void setup()
-{
-    pinMode(OutputPin, OUTPUT);
-    digitalWrite(OutputPin, HIGH);
-}
-
-void mark(int time) {
-    digitalWrite(OutputPin, LOW);
-    delayMicroseconds(time);
-}
-
-void space(int time) {
-    digitalWrite(OutputPin, HIGH);
-    delayMicroseconds(time);
-}
-
-void sendNEC(unsigned long data) {
-    mark(NEC_HDR_MARK);
-    space(NEC_HDR_SPACE);
-
-    for (int i = 0; i < 32; i++) {
-        if (data & TOPBIT) {
-            mark(NEC_BIT_MARK);
-            space(NEC_ONE_SPACE);
-        }
-        else {
-            mark(NEC_BIT_MARK);
-            space(NEC_ZERO_SPACE);
-        }
-        data <<= (uint8_t) 1;
-    }
-    mark(NEC_BIT_MARK);
-    space(0);
-}
-
-void loop() {
-    sendNEC(0x5D0532CD);
-    delay(5000);
-}
+//
+//// pulse parameters in usec
+//#define NEC_HDR_MARK  9000
+//#define NEC_HDR_SPACE 4500
+//#define NEC_BIT_MARK  560
+//#define NEC_ONE_SPACE 1600
+//#define NEC_ZERO_SPACE  560
+//#define NEC_RPT_SPACE 2250
+//
+//#define TOPBIT 0x80000000
+//
+//const int OutputPin = 13;
+//
+//void setup()
+//{
+//    pinMode(OutputPin, OUTPUT);
+//    digitalWrite(OutputPin, HIGH);
+//}
+//
+//void mark(int time) {
+//    digitalWrite(OutputPin, LOW);
+//    delayMicroseconds(time);
+//}
+//
+//void space(int time) {
+//    digitalWrite(OutputPin, HIGH);
+//    delayMicroseconds(time);
+//}
+//
+//void sendNEC(unsigned long data) {
+//    mark(NEC_HDR_MARK);
+//    space(NEC_HDR_SPACE);
+//
+//    for (int i = 0; i < 32; i++) {
+//        if (data & TOPBIT) {
+//            mark(NEC_BIT_MARK);
+//            space(NEC_ONE_SPACE);
+//        }
+//        else {
+//            mark(NEC_BIT_MARK);
+//            space(NEC_ZERO_SPACE);
+//        }
+//        data <<= (uint8_t) 1;
+//    }
+//    mark(NEC_BIT_MARK);
+//    space(0);
+//}
+//
+//void loop() {
+//    sendNEC(0x5D0532CD);
+//    delay(5000);
+//}
