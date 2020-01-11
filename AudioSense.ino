@@ -162,16 +162,16 @@ void loop() {
         }
     }
 
-    // Auto power off
-    if (!signalPresent && poweredOn){
-#ifdef DEBUG
-        Serial.print("OFF Delay: ");
-        Serial.println(stateTimer);
-#endif
-        if (stateTimer >= OFF_TRIGGER_TIME){
-            sendNEC(0x5D0532CD);
-        }
-    }
+//    // Auto power off
+//    if (!signalPresent && poweredOn){
+//#ifdef DEBUG
+//        Serial.print("OFF Delay: ");
+//        Serial.println(stateTimer);
+//#endif
+//        if (stateTimer >= OFF_TRIGGER_TIME){
+//            sendNEC(0x5D0532CD);
+//        }
+//    }
 
     // Match LED to system state
     // TODO: Handle CONTROL_IN floating state (used to flash LED when remote is used and when speakers are muted)
