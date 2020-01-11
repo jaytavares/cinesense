@@ -1,6 +1,9 @@
 #include <Arduino.h>
 #include "User_Setup.h"
 
+// Uncomment to enable serial debugging
+//#define DEBUG
+
 // Define pins
 #define AUDIO_SENSE_PIN A0
 #define CONTROL_IN 5
@@ -17,12 +20,14 @@
 #define SIGNAL_THRESHOLD 100  // milliseconds
 
 void setup() {
+#ifdef DEBUG
     Serial.begin(115200);
+    pinMode(13, OUTPUT);
+#endif
     pinMode(AUDIO_SENSE_PIN, INPUT);
     pinMode(CONTROL_IN, INPUT);
     pinMode(CONTROL_OUT, OUTPUT);
     pinMode(IR_LINE, INPUT);
-    pinMode(13, OUTPUT); // TESTING
 }
 
 /*
@@ -49,7 +54,9 @@ void space(int time) {
 }
 
 void sendNEC(unsigned long data) {
+#ifdef DEBUG
     Serial.println("Sending IR");
+#endif
     pinMode(IR_LINE, OUTPUT);
     digitalWrite(IR_LINE, HIGH);
     delay(100);
@@ -123,20 +130,21 @@ void loop() {
 
     bool poweredOn = checkPowerState();
     if (lastPowerState != poweredOn) {
+#ifdef DEBUG
         Serial.print("Power: ");
         Serial.println(poweredOn ? "ON" : "OFF");
-
+#endif
         stateStartTime = millis();
     }
     lastPowerState = poweredOn;
 
     bool signalPresent = checkSignal();
     if (lastSignalState != signalPresent) {
-        // DEBUGGING
+#ifdef DEBUG
         Serial.print("Audio signal: ");
         Serial.println(signalPresent);
         digitalWrite(13, signalPresent);
-
+#endif
         stateStartTime = millis();
     }
     lastSignalState = signalPresent;
@@ -145,8 +153,10 @@ void loop() {
 
     // Auto power on
     if (signalPresent && !poweredOn){
+#ifdef DEBUG
         Serial.print("ON Delay: ");
         Serial.println(stateTimer);
+#endif
         if (stateTimer >= ON_TRIGGER_TIME){
             sendNEC(0x5D0532CD);
         }
@@ -154,8 +164,10 @@ void loop() {
 
     // Auto power on
     if (!signalPresent && poweredOn){
+#ifdef DEBUG
         Serial.print("OFF Delay: ");
         Serial.println(stateTimer);
+#endif
         if (stateTimer >= OFF_TRIGGER_TIME){
             sendNEC(0x5D0532CD);
         }
@@ -165,5 +177,5 @@ void loop() {
     // TODO: Handle CONTROL_IN floating state (used to flash LED when remote is used and when speakers are muted)
     digitalWrite(CONTROL_OUT, digitalRead(CONTROL_IN));
 
-    delay(100);
+    delay(500);
 }
