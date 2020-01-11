@@ -72,6 +72,7 @@ void sendNEC(unsigned long data) {
     space(0);
 
     pinMode(IR_LINE, INPUT);
+    delay(1000);
 }
 
 /*
@@ -148,7 +149,15 @@ void loop() {
         Serial.println(stateTimer);
         if (stateTimer >= ON_TRIGGER_TIME){
             sendNEC(0x5D0532CD);
-            delay(500);
+        }
+    }
+
+    // Auto power on
+    if (!signalPresent && poweredOn){
+        Serial.print("OFF Delay: ");
+        Serial.println(stateTimer);
+        if (stateTimer >= OFF_TRIGGER_TIME){
+            sendNEC(0x5D0532CD);
         }
     }
 
