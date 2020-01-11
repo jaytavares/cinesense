@@ -8,7 +8,13 @@
 #define IR_LINE 7
 
 // Define settings
-#define SIGNAL_THRESHOLD 250  // milliseconds
+
+// Automatic speaker power trigger times
+#define ON_TRIGGER_TIME 2000  // milliseconds; Signal must be present for this long before speakers are powered on
+#define OFF_TRIGGER_TIME 10000  // milliseconds; Signal must be absent for this long before speakers are powered off
+
+// Audio signal must be LOW for this amount of time to be considered absent
+#define SIGNAL_THRESHOLD 100  // milliseconds
 
 void setup() {
     Serial.begin(115200);
@@ -43,6 +49,7 @@ void space(int time) {
 }
 
 void sendNEC(unsigned long data) {
+    Serial.println("Sending IR");
     pinMode(IR_LINE, OUTPUT);
     digitalWrite(IR_LINE, HIGH);
     delay(100);
@@ -71,27 +78,16 @@ void sendNEC(unsigned long data) {
  * END IR STUFF
  */
 
-bool lastPowerState = false;
-
-bool isPoweredOn() {
-    bool value = digitalRead(CONTROL_IN) == HIGH;
-
-    if (lastPowerState != value) {
-        Serial.print("Power: ");
-        Serial.println(value ? "ON" : "OFF");
-    }
-
-    lastPowerState = value;
-    return value;
+bool checkPowerState() {
+    return digitalRead(CONTROL_IN) == HIGH;
 }
 
-bool lastSignalState = false;
 
 bool checkSignal() {
     bool SIG_SENSED = false;
-    
+
     // Find out if speaker is off
-    bool POWER_OFF = !digitalRead(CONTROL_IN);
+    bool POWER_OFF = !checkPowerState();
 
     // If speaker is off, float the CONTROL_OUT line.
     // This will turn on the optical input but won't turn on the power LED.
@@ -114,26 +110,47 @@ bool checkSignal() {
         pinMode(CONTROL_OUT, OUTPUT);
     }
 
-    // DEBUGGING
-    if (SIG_SENSED != lastSignalState) {
-        Serial.print("Audio signal: ");
-        Serial.println(SIG_SENSED);
-        digitalWrite(13, SIG_SENSED);
-    }
-
-    lastSignalState = SIG_SENSED;
-
     return SIG_SENSED;
 }
 
+bool lastPowerState = false;
+bool lastSignalState = false;
+
+unsigned long stateStartTime = 0;
 
 void loop() {
 
-    // 1. Check CONTROL LINE IN from sub woofer, if HIGH speakers are already on, abort.
-    isPoweredOn();
+    bool poweredOn = checkPowerState();
+    if (lastPowerState != poweredOn) {
+        Serial.print("Power: ");
+        Serial.println(poweredOn ? "ON" : "OFF");
 
-    if (checkSignal() && !isPoweredOn())
-        sendNEC(0x5D0532CD);
+        stateStartTime = millis();
+    }
+    lastPowerState = poweredOn;
+
+    bool signalPresent = checkSignal();
+    if (lastSignalState != signalPresent) {
+        // DEBUGGING
+        Serial.print("Audio signal: ");
+        Serial.println(signalPresent);
+        digitalWrite(13, signalPresent);
+
+        stateStartTime = millis();
+    }
+    lastSignalState = signalPresent;
+
+    unsigned long stateTimer = millis() - stateStartTime;
+
+    // Auto power on
+    if (signalPresent && !poweredOn){
+        Serial.print("ON Delay: ");
+        Serial.println(stateTimer);
+        if (stateTimer >= ON_TRIGGER_TIME){
+            sendNEC(0x5D0532CD);
+            delay(500);
+        }
+    }
 
     // Match LED to system state
     // TODO: Handle CONTROL_IN floating state (used to flash LED when remote is used and when speakers are muted)
