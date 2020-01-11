@@ -162,7 +162,7 @@ void loop() {
         }
     }
 
-    // Auto power on
+    // Auto power off
     if (!signalPresent && poweredOn){
 #ifdef DEBUG
         Serial.print("OFF Delay: ");
