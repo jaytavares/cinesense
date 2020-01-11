@@ -81,7 +81,9 @@ void loop() {
 
     checkSignal();
 
+    // Match LED to system state
+    // TODO: Handle CONTROL_IN floating state (used to flash LED when remote is used and when speakers are muted)
     digitalWrite(CONTROL_OUT, digitalRead(CONTROL_IN));
 
-    delay(1000);
+    delay(100);
 }
