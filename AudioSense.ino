@@ -13,8 +13,7 @@
 // Define settings
 
 // Automatic speaker power trigger times
-#define ON_TRIGGER_TIME 2000  // milliseconds; Signal must be present for this long before speakers are powered on
-#define OFF_TRIGGER_TIME 10000  // milliseconds; Signal must be absent for this long before speakers are powered off
+#define ON_TRIGGER_TIME 300  // milliseconds; Signal must be present for this long before speakers are powered on
 
 // Audio signal must be LOW for this amount of time to be considered absent
 #define SIGNAL_THRESHOLD 100  // milliseconds
@@ -162,20 +161,7 @@ void loop() {
         }
     }
 
-//    // Auto power off
-//    if (!signalPresent && poweredOn){
-//#ifdef DEBUG
-//        Serial.print("OFF Delay: ");
-//        Serial.println(stateTimer);
-//#endif
-//        if (stateTimer >= OFF_TRIGGER_TIME){
-//            sendNEC(0x5D0532CD);
-//        }
-//    }
-
     // Match LED to system state
     // TODO: Handle CONTROL_IN floating state (used to flash LED when remote is used and when speakers are muted)
     digitalWrite(CONTROL_OUT, digitalRead(CONTROL_IN));
-
-    delay(500);
 }
