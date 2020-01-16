@@ -8,6 +8,7 @@
 // Define settings
 // Automatic speaker power trigger times
 #define ON_TRIGGER_TIME 300  // milliseconds; Signal must be present for this long before speakers are powered on
+#define OFF_TRIGGER_TIME 1000 * 10 // seconds; Signal must be absent for this long before speakers are powered off
 
 // Audio signal must be LOW for this amount of time to be considered absent
 #define SIGNAL_THRESHOLD 100  // milliseconds
@@ -105,6 +106,17 @@ void loop() {
         Serial.println(stateTimer);
 #endif
         if (stateTimer >= ON_TRIGGER_TIME){
+            sendNEC(0x5D0532CD);
+        }
+    }
+
+    // Auto power off
+    if (!signalPresent && poweredOn){
+#ifdef DEBUG
+        Serial.print("OFF Delay: ");
+        Serial.println(stateTimer);
+#endif
+        if (stateTimer >= OFF_TRIGGER_TIME){
             sendNEC(0x5D0532CD);
         }
     }
