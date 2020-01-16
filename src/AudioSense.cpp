@@ -4,9 +4,9 @@
 //#define DEBUG
 
 // Define pins
-#define AUDIO_SENSE_PIN 0
+#define AUDIO_SENSE_PIN A1
 #define CONTROL_IN A2
-#define CONTROL_OUT 2
+#define CONTROL_OUT 1
 #define IR_LINE 3
 
 // Define settings
@@ -20,12 +20,11 @@
 void setup() {
 #ifdef DEBUG
     Serial.begin(115200);
-    pinMode(13, OUTPUT);
 #endif
-//    pinMode(AUDIO_SENSE_PIN, INPUT);
+    pinMode(AUDIO_SENSE_PIN, INPUT);
     pinMode(CONTROL_IN, INPUT);
     pinMode(CONTROL_OUT, OUTPUT);
-//    pinMode(IR_LINE, OUTPUT);
+    pinMode(IR_LINE, INPUT);
 }
 
 /*
@@ -85,7 +84,11 @@ void sendNEC(unsigned long data) {
  */
 
 bool powerOn() {
-    return analogRead(CONTROL_IN) > 100;
+    return analogRead(CONTROL_IN) > 50;
+}
+
+bool ledOn() {
+    return analogRead(CONTROL_IN) > 700;
 }
 
 bool checkSignal() {
@@ -102,7 +105,7 @@ bool checkSignal() {
     // Check for audio signal
     unsigned long startTime = millis();
     while (millis() - startTime < SIGNAL_THRESHOLD) {
-        if (digitalRead(AUDIO_SENSE_PIN) == HIGH) {
+        if (analogRead(AUDIO_SENSE_PIN) > 100) {
             // A signal was sensed for longer than the threshold setting
             SIG_SENSED = true;
         }
@@ -121,13 +124,8 @@ bool lastSignalState = false;
 
 unsigned long stateStartTime = 0;
 
-bool ledOn() {
-    return analogRead(CONTROL_IN) > 700;
-}
-
 void loop() {
-    
-    
+
     if (ledOn()) {
         pinMode(CONTROL_OUT, OUTPUT);
         digitalWrite(CONTROL_OUT, HIGH);
@@ -140,36 +138,35 @@ void loop() {
         digitalWrite(CONTROL_OUT, LOW);
     }
 
-//    if (lastPowerState != poweredOn) {
-//#ifdef DEBUG
-//        Serial.print("Power: ");
-//        Serial.println(poweredOn ? "ON" : "OFF");
-//#endif
-//        stateStartTime = millis();
-//    }
-//    lastPowerState = poweredOn;
-//
-//    bool signalPresent = checkSignal();
-//    if (lastSignalState != signalPresent) {
-//#ifdef DEBUG
-//        Serial.print("Audio signal: ");
-//        Serial.println(signalPresent);
-//        digitalWrite(13, signalPresent);
-//#endif
-//        stateStartTime = millis();
-//    }
-//    lastSignalState = signalPresent;
-//
-//    unsigned long stateTimer = millis() - stateStartTime;
-//
-//    // Auto power on
-//    if (signalPresent && !poweredOn){
-//#ifdef DEBUG
-//        Serial.print("ON Delay: ");
-//        Serial.println(stateTimer);
-//#endif
-//        if (stateTimer >= ON_TRIGGER_TIME){
-//            sendNEC(0x5D0532CD);
-//        }
-//    }
+    if (lastPowerState != poweredOn) {
+#ifdef DEBUG
+        Serial.print("Power: ");
+        Serial.println(poweredOn ? "ON" : "OFF");
+#endif
+        stateStartTime = millis();
+    }
+    lastPowerState = poweredOn;
+
+    bool signalPresent = checkSignal();
+    if (lastSignalState != signalPresent) {
+#ifdef DEBUG
+        Serial.print("Audio signal: ");
+        Serial.println(signalPresent);
+#endif
+        stateStartTime = millis();
+    }
+    lastSignalState = signalPresent;
+
+    unsigned long stateTimer = millis() - stateStartTime;
+
+    // Auto power on
+    if (signalPresent && !poweredOn){
+#ifdef DEBUG
+        Serial.print("ON Delay: ");
+        Serial.println(stateTimer);
+#endif
+        if (stateTimer >= ON_TRIGGER_TIME){
+            sendNEC(0x5D0532CD);
+        }
+    }
 }
