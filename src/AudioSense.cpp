@@ -5,7 +5,7 @@
 
 // Define pins
 #define AUDIO_SENSE_PIN 0
-#define CONTROL_IN 1
+#define CONTROL_IN A2
 #define CONTROL_OUT 2
 #define IR_LINE 3
 
@@ -22,10 +22,10 @@ void setup() {
     Serial.begin(115200);
     pinMode(13, OUTPUT);
 #endif
-    pinMode(AUDIO_SENSE_PIN, INPUT);
+//    pinMode(AUDIO_SENSE_PIN, INPUT);
     pinMode(CONTROL_IN, INPUT);
     pinMode(CONTROL_OUT, OUTPUT);
-    pinMode(IR_LINE, INPUT);
+//    pinMode(IR_LINE, OUTPUT);
 }
 
 /*
@@ -84,16 +84,15 @@ void sendNEC(unsigned long data) {
  * END IR STUFF
  */
 
-bool checkPowerState() {
-    return digitalRead(CONTROL_IN) == HIGH;
+bool powerOn() {
+    return analogRead(CONTROL_IN) > 100;
 }
-
 
 bool checkSignal() {
     bool SIG_SENSED = false;
 
     // Find out if speaker is off
-    bool POWER_OFF = !checkPowerState();
+    bool POWER_OFF = !powerOn();
 
     // If speaker is off, float the CONTROL_OUT line.
     // This will turn on the optical input but won't turn on the power LED.
@@ -122,43 +121,55 @@ bool lastSignalState = false;
 
 unsigned long stateStartTime = 0;
 
+bool ledOn() {
+    return analogRead(CONTROL_IN) > 700;
+}
+
 void loop() {
+    
+    
+    if (ledOn()) {
+        pinMode(CONTROL_OUT, OUTPUT);
+        digitalWrite(CONTROL_OUT, HIGH);
+    } else
+        pinMode(CONTROL_OUT, INPUT);
 
-    bool poweredOn = checkPowerState();
-    if (lastPowerState != poweredOn) {
-#ifdef DEBUG
-        Serial.print("Power: ");
-        Serial.println(poweredOn ? "ON" : "OFF");
-#endif
-        stateStartTime = millis();
-    }
-    lastPowerState = poweredOn;
-
-    bool signalPresent = checkSignal();
-    if (lastSignalState != signalPresent) {
-#ifdef DEBUG
-        Serial.print("Audio signal: ");
-        Serial.println(signalPresent);
-        digitalWrite(13, signalPresent);
-#endif
-        stateStartTime = millis();
-    }
-    lastSignalState = signalPresent;
-
-    unsigned long stateTimer = millis() - stateStartTime;
-
-    // Auto power on
-    if (signalPresent && !poweredOn){
-#ifdef DEBUG
-        Serial.print("ON Delay: ");
-        Serial.println(stateTimer);
-#endif
-        if (stateTimer >= ON_TRIGGER_TIME){
-            sendNEC(0x5D0532CD);
-        }
+    bool poweredOn = powerOn();
+    if (!poweredOn){
+        pinMode(CONTROL_OUT, OUTPUT);
+        digitalWrite(CONTROL_OUT, LOW);
     }
 
-    // Match LED to system state
-    // TODO: Handle CONTROL_IN floating state (used to flash LED when remote is used and when speakers are muted)
-    digitalWrite(CONTROL_OUT, digitalRead(CONTROL_IN));
+//    if (lastPowerState != poweredOn) {
+//#ifdef DEBUG
+//        Serial.print("Power: ");
+//        Serial.println(poweredOn ? "ON" : "OFF");
+//#endif
+//        stateStartTime = millis();
+//    }
+//    lastPowerState = poweredOn;
+//
+//    bool signalPresent = checkSignal();
+//    if (lastSignalState != signalPresent) {
+//#ifdef DEBUG
+//        Serial.print("Audio signal: ");
+//        Serial.println(signalPresent);
+//        digitalWrite(13, signalPresent);
+//#endif
+//        stateStartTime = millis();
+//    }
+//    lastSignalState = signalPresent;
+//
+//    unsigned long stateTimer = millis() - stateStartTime;
+//
+//    // Auto power on
+//    if (signalPresent && !poweredOn){
+//#ifdef DEBUG
+//        Serial.print("ON Delay: ");
+//        Serial.println(stateTimer);
+//#endif
+//        if (stateTimer >= ON_TRIGGER_TIME){
+//            sendNEC(0x5D0532CD);
+//        }
+//    }
 }

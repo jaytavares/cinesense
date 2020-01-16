@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="cinemate"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_REBUILD_PROJECT_INDEX">
+				<Option working_dir="/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 PLATFORMIO_REBUILD_PROJECT_INDEX"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_PROGRAM">
+				<Option working_dir="/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 PLATFORMIO_PROGRAM"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_UPDATE_ALL">
+				<Option working_dir="/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 PLATFORMIO_UPDATE_ALL"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_UPLOADFS">
+				<Option working_dir="/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 PLATFORMIO_UPLOADFS"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_TEST">
+				<Option working_dir="/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 PLATFORMIO_TEST"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_UPLOAD">
+				<Option working_dir="/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 PLATFORMIO_UPLOAD"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Z_DUMMY_TARGET">
+				<Option output="/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Z_DUMMY_TARGET" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/jay/dev/arduino/projects/cinemate/include"/>
+					<Add directory="/Users/jay/dev/arduino/projects/cinemate/src"/>
+					<Add directory="/Users/jay/.platformio/packages/framework-arduino-avr-attiny/cores/tiny"/>
+					<Add directory="/Users/jay/.platformio/packages/framework-arduino-avr-attiny/variants/tinyX5"/>
+					<Add directory="/Users/jay/.platformio/packages/framework-arduino-avr-attiny/libraries/ATTinyCore/src"/>
+					<Add directory="/Users/jay/.platformio/packages/framework-arduino-avr-attiny/libraries/EEPROM"/>
+					<Add directory="/Users/jay/.platformio/packages/framework-arduino-avr-attiny/libraries/SPI"/>
+					<Add directory="/Users/jay/.platformio/packages/framework-arduino-avr-attiny/libraries/Servo/src"/>
+					<Add directory="/Users/jay/.platformio/packages/framework-arduino-avr-attiny/libraries/Servo_ATTinyCore/src"/>
+					<Add directory="/Users/jay/.platformio/packages/framework-arduino-avr-attiny/libraries/SoftwareSerial"/>
+					<Add directory="/Users/jay/.platformio/packages/framework-arduino-avr-attiny/libraries/Wire/src"/>
+					<Add directory="/Users/jay/.platformio/packages/framework-arduino-avr-attiny/libraries/tinyNeoPixel"/>
+					<Add directory="/Users/jay/.platformio/packages/framework-arduino-avr-attiny/libraries/tinyNeoPixel_Static"/>
+					<Add directory="/Users/jay/.platformio/packages/toolchain-atmelavr/avr/include"/>
+					<Add directory="/Users/jay/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/5.4.0/include"/>
+					<Add directory="/Users/jay/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/5.4.0/include-fixed"/>
+					<Add directory="/Users/jay/.platformio/packages/tool-unity"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 Z_DUMMY_TARGET"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Z_DUMMY_TARGET/fast">
+				<Option output="/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Z_DUMMY_TARGET" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/jay/dev/arduino/projects/cinemate/include"/>
+					<Add directory="/Users/jay/dev/arduino/projects/cinemate/src"/>
+					<Add directory="/Users/jay/.platformio/packages/framework-arduino-avr-attiny/cores/tiny"/>
+					<Add directory="/Users/jay/.platformio/packages/framework-arduino-avr-attiny/variants/tinyX5"/>
+					<Add directory="/Users/jay/.platformio/packages/framework-arduino-avr-attiny/libraries/ATTinyCore/src"/>
+					<Add directory="/Users/jay/.platformio/packages/framework-arduino-avr-attiny/libraries/EEPROM"/>
+					<Add directory="/Users/jay/.platformio/packages/framework-arduino-avr-attiny/libraries/SPI"/>
+					<Add directory="/Users/jay/.platformio/packages/framework-arduino-avr-attiny/libraries/Servo/src"/>
+					<Add directory="/Users/jay/.platformio/packages/framework-arduino-avr-attiny/libraries/Servo_ATTinyCore/src"/>
+					<Add directory="/Users/jay/.platformio/packages/framework-arduino-avr-attiny/libraries/SoftwareSerial"/>
+					<Add directory="/Users/jay/.platformio/packages/framework-arduino-avr-attiny/libraries/Wire/src"/>
+					<Add directory="/Users/jay/.platformio/packages/framework-arduino-avr-attiny/libraries/tinyNeoPixel"/>
+					<Add directory="/Users/jay/.platformio/packages/framework-arduino-avr-attiny/libraries/tinyNeoPixel_Static"/>
+					<Add directory="/Users/jay/.platformio/packages/toolchain-atmelavr/avr/include"/>
+					<Add directory="/Users/jay/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/5.4.0/include"/>
+					<Add directory="/Users/jay/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/5.4.0/include-fixed"/>
+					<Add directory="/Users/jay/.platformio/packages/tool-unity"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 Z_DUMMY_TARGET/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_BUILD_DEBUG">
+				<Option working_dir="/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 PLATFORMIO_BUILD_DEBUG"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_CLEAN">
+				<Option working_dir="/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 PLATFORMIO_CLEAN"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_DEVICE_LIST">
+				<Option working_dir="/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 PLATFORMIO_DEVICE_LIST"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_BUILD">
+				<Option working_dir="/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 PLATFORMIO_BUILD"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_BUILD_VERBOSE">
+				<Option working_dir="/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 PLATFORMIO_BUILD_VERBOSE"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_MONITOR">
+				<Option working_dir="/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 PLATFORMIO_MONITOR"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jay/dev/arduino/projects/cinemate/cmake-build-attiny85/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/jay/dev/arduino/projects/cinemate/src/AudioSense.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/jay/dev/arduino/projects/cinemate/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/jay/dev/arduino/projects/cinemate/CMakeListsPrivate.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
