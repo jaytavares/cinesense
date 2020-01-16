@@ -1,3 +1,8 @@
+.pioenvs
+.piolibdeps
+.clang_complete
+.gcc-flags.json
+.pio
 CMakeLists.txt.user
 CMakeCache.txt
 CMakeFiles
