@@ -237,6 +237,9 @@
 		<Unit filename="/Users/jay/dev/arduino/projects/cinemate/src/AudioSense.cpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
+		<Unit filename="/Users/jay/dev/arduino/projects/cinemate/src/IRDirect.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
 		<Unit filename="/Users/jay/dev/arduino/projects/cinemate/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
