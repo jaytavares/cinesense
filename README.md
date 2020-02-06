@@ -1,4 +1,4 @@
-#Cinemate Audio Sense
+# Cinemate Audio Sense
 ![Assembled Board](.github/installed.jpeg)
 
 Do you have Bose Cinemate speakers? Do you wish they would just turn on automatically when you need them
