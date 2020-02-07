@@ -17,7 +17,7 @@ You'll need a few parts:
 - 1x [ATTINY85 microchip](https://www.digikey.com/product-detail/en/microchip-technology/ATTINY85-20PU/ATTINY85-20PU-ND/735469)
 - 2x [1㏁ resistors](https://www.digikey.com/product-detail/en/stackpole-electronics-inc/CF14JT1M00/CF14JT1M00CT-ND/1830423)*
 - 1x [.1µF capacitor](https://www.digikey.com/product-detail/en/kemet/C320C104M5U5TA7301/399-9872-1-ND/3726097)
-- 1x [2x3 header](https://www.sparkfun.com/products/12807) (_Optional_--only needed if you plan to program the chip on the board.)
+- 1x [2x3 header](https://www.digikey.com/product-detail/en/adam-tech/PH2-06-UA/2057-PH2-06-UA-ND/9830396) (_Optional_--only needed if you plan to program the chip on the board.)
 
 \* Linked resistor should work, though I just used some spares I had on hand of unknown brand.
 
