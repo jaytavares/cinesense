@@ -8,6 +8,13 @@ adapter that plugs into the interface module cable and adds audio sensing capabi
 \* This project has only been tested with Bose Cinemate GS Series II speakers. I _think_ it should work with other
 related models, but YMMV.
 
+## How It Works
+When placed inline between the sub woofer module and the interface module, the Cinesense adapter repeatedly polls the optical audio input for a signal. When a signal is sensed, the speakers are automatically turned on. The adapter will continue to monitor the signal while the speakers are in use. Once the signal has stopped for ten seconds, the adapter will turn the speakers off.
+
+NOTE: The adapter only looks at the optical input and will not respond to audio signals on the analog inputs. This is a potential future enhancement that can be made to the design. Also, the term "Audio Signal" here is referring to optical audio "data" which is not the same as "sound". It's possible for the optical audio signal to be present _and_ silent (e.g. music player is powered on but is paused).
+
+Aside from the new found ability to automatically turn on and off in response to the audio signal, all aspects of the speakers are the same. You can still use your remote to control the volume and mute the speakers. You can even use your remote to turn the speakers off, though if there is an audio signal present, they'll just turn right back on again.
+
 ## The Parts List
 You'll need a few parts:
 
@@ -57,4 +64,4 @@ platformio run
 This should compile the software, burn the correct fuses, and upload the software to the chip.
 
 ## Legal
-This project is licensed under the MIT License. See [LICENSE.txt](LICENSE.txt) for more information. "Bose" and "Cinemate" are registered trademarks of Bose Corporation, Framingham, MA. This project is not endorsed or affiliated with the Bose Corporation.
+This project is licensed under the MIT License. See [LICENSE.txt](LICENSE.txt) for more information. "Bose" and "Cinemate" are registered trademarks of Bose Corporation, Framingham, MA. This project is not endorsed by or affiliated with the Bose Corporation.
