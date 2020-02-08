@@ -45,7 +45,7 @@ The board was designed using Eagle. If you need to make any modifications, you w
 ## The Software
 
 ### Use Precompiled software (Easiest option)
- 1. Download the most recent `.hex` file from the [Releases](https://github.com/jaytavares/cinesense/releases) page.
+ 1. Download the most recent `firmware.hex` file from the [Releases](https://github.com/jaytavares/cinesense/releases) page.
  2. Connect your AVR Programmer to the chip. (I've included an ISP header on the board if you don't have a standalone programmer for ATTINY chips.)
  3. Use [avrdude](http://savannah.nongnu.org/projects/avrdude/) to program the ATTINY chip. Assuming you're using the "Pocket AVR Programer", run:
 ```
