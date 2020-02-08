@@ -1,4 +1,4 @@
-# Cinemate Audio Sense
+# Cinesense: an Audio Sensing Add-on for Bose Cinemate Speakers
 ![Assembled Board](.github/installed.jpeg)
 
 Do you have Bose Cinemate speakers? Do you wish they would just turn on automatically when you need them
@@ -37,24 +37,24 @@ The board was designed using Eagle. If you need to make any modifications, you w
 
 ## The Software
 
-The software for this project is built using the fantastic [PlatformIO](https://platformio.org). If you're like me and 
-using macOS with [Homebrew](https://brew.sh) installed. Installation is as simple as:
-
+### Use Precompiled software (Easiest option)
+ 1. Download the most recent `.hex` file from the [Releases](https://github.com/jaytavares/cinesense/releases) page.
+ 2. Connect your AVR Programmer to the chip. (I've included an ISP header on the board if you don't have a standalone programmer for ATTINY chips.)
+ 3. Use [avrdude](http://savannah.nongnu.org/projects/avrdude/) to program the ATTINY chip. Assuming you're using the "Pocket AVR Programer", run:
 ```
-$ brew install platformio
+$ avrdude -c usbtiny -p t85 -U lfuse:w:0xe2:m -U hfuse:w:0xdf:m -U efuse:w:0xff:m -U flash:w:firmware.hex:i
 ```
 
-If not, follow the [installation instructions on the PlatformIO site](https://docs.platformio.org/en/latest/installation.html#installation-methods).
+### Build from the source (Most flexible option)
+If you would like to customize your Cinesense, you'll have to build the software from the source. The software for this project is built using the fantastic [PlatformIO](https://platformio.org). 
 
 #### Programming the chip
-To program the chip using PlatformIO:
-
-Connect your AVR Programmer to the chip. (I've included an ISP header on the board if you don't have a standalone programmer for ATTINY chips.)
-
-Then, in the root directory of this project, run:
-
+ 1. Connect your AVR Programmer to the chip. (I've included an ISP header on the board if you don't have a standalone programmer for ATTINY chips.)
+ 2. In the root directory of this project, run:
 ```
 platformio run
 ```
-
 This should compile the software, burn the correct fuses, and upload the software to the chip.
+
+## Legal
+This project is licensed under the MIT License. See [LICENSE.txt](LICENSE.txt) for more information. "Bose" and "Cinemate" are registered trademarks of Bose Corporation, Framingham, MA. This project is not endorsed or affiliated with the Bose Corporation.
