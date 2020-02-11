@@ -90,6 +90,15 @@ For convenience, You can purchase the board on [OSHPark](https://oshpark.com/sha
 ### Schematic and Board layout file
 The board was designed using Eagle. If you need to make any modifications, you will find the original CAD files in the [board](./board) folder.
 
+### Assembly
+![Tabs on circuit boards](.github/tabs.jpeg)
+
+Before you start assembly, be sure to file off any tabs left on your boards as a result of panelization. If you skip this
+step, you'll have trouble fitting the completed board into the housing. This is especially important for tabs along the 
+short edges where the DB9 connectors attach. After removing the tabs, I dry fit the connectors on the board and placed 
+everything in one half of the housing. I was then able to tack solder the connectors in place to ensure the final 
+assembly would fit in the housing. 
+
 ## The Software
 
 ### Use Precompiled software (Easiest option)
