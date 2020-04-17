@@ -36,11 +36,11 @@ Some notes:
 
   - Pin 4 - Interface module CONTROL LINE
     - Has three possible states
+      - LOW - power off
       - HIGH - power on, LED on
       - FLOAT - power on, LED off
-        - How the LED is able to flash when the speakers are muted and in response to remote button presses.
-        - Allows us to turn on the optical input without also turning on the LED in the interface module. 👍
-      - LOW - power off
+        - This is how the LED is able to flash when the speakers are muted and in response to remote button presses.
+        - This allows us to turn on the optical input without also turning on the LED in the interface module. 👍
   - Pin 8 - Optical audio
     - Digital audio data (Didn't seem to be at the same 3.3v logic level--it was lower.)
   - Pin 9 - IR Line
