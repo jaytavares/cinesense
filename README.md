@@ -66,6 +66,7 @@ Here are the commands that they support:
 ## The Parts List
 You'll need a few parts:
 
+- 1x [Printed circuit board](https://oshpark.com/shared_projects/EzLrNW1y)
 - 1x [Dual sided hood](https://www.showmecables.com/db9-hd15-vga-dual-sided-hood-plastic)
 - 1x [DB9 Male connector](https://www.showmecables.com/db9-male-solder-connector)
 - 1x [DB9 Female connector](https://www.showmecables.com/db9-female-solder-connector)
