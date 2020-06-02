@@ -71,11 +71,9 @@ You'll need a few parts:
 - 1x [DB9 Male connector](https://www.showmecables.com/db9-male-solder-connector)
 - 1x [DB9 Female connector](https://www.showmecables.com/db9-female-solder-connector)
 - 1x [ATTINY85 microchip](https://www.digikey.com/product-detail/en/microchip-technology/ATTINY85-20PU/ATTINY85-20PU-ND/735469)
-- 2x [1㏁ resistors](https://www.digikey.com/short/zjj1fm) *
+- 2x [1㏁ resistors](https://www.digikey.com/short/zjj1fm)
 - 1x [.1µF capacitor](https://www.digikey.com/product-detail/en/kemet/C315C104M5U5TA/399-4151-ND/817927)
 - 1x [2x3 header](https://www.digikey.com/product-detail/en/adam-tech/PH2-06-UA/2057-PH2-06-UA-ND/9830396) (_Optional_--only needed if you plan to program the chip on the board.)
-
-\* Linked resistor should work, though I just used some spares I had on hand of unknown brand.
 
 ## The Tools
 Naturally, you'll need soldering supplies to assemble the board. Once assembled, I use the [Pocket AVR Programmer](https://www.sparkfun.com/products/9825)
