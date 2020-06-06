@@ -67,13 +67,13 @@ Here are the commands that they support:
 You'll need a few parts:
 
 - 1x [Printed circuit board](https://oshpark.com/shared_projects/EzLrNW1y)
-- 1x [Dual sided hood](https://www.digikey.com/product-detail/en/norcomp-inc/957-009-010R031/957-0931E-ND/1632190)
-- 1x [DB9 Male connector](https://www.digikey.com/product-detail/en/amphenol-icc-fci/DE09P064TXLF/609-1524-ND/1001838)
-- 1x [DB9 Female connector](https://www.digikey.com/product-detail/en/amphenol-icc-fci/DEV09S064TLF/609-6430-ND/4269187)
-- 1x [ATTINY85 microchip](https://www.digikey.com/product-detail/en/microchip-technology/ATTINY85-20PU/ATTINY85-20PU-ND/735469)
-- 2x [1㏁ resistors](https://www.digikey.com/short/zjj1fm)
-- 1x [.1µF capacitor](https://www.digikey.com/product-detail/en/kemet/C315C104M5U5TA/399-4151-ND/817927)
-- 1x [2x3 header](https://www.digikey.com/product-detail/en/adam-tech/PH2-06-UA/2057-PH2-06-UA-ND/9830396) (_Optional_--only needed if you plan to program the chip on the board.)
+- 1x [Dual sided hood](https://www.mouser.com/ProductDetail/636-957-009-010R031)
+- 1x [DB9 Male connector](https://www.mouser.com/ProductDetail/649-DEV09P064TXLF)
+- 1x [DB9 Female connector](https://www.mouser.com/ProductDetail/649-DE09S064TLF)
+- 1x [ATTINY85 microchip](https://www.mouser.com/ProductDetail/556-ATTINY85-20PU)
+- 2x [1㏁ resistors](https://www.mouser.com/ProductDetail/603-CFR-25JB-52-1M)
+- 1x [.1µF capacitor](https://www.mouser.com/ProductDetail/80-C315C104M5U)
+- 1x [2x3 header](https://www.mouser.com/ProductDetail/855-M20-9720345) (_Optional_--only needed if you plan to program the chip on the board.)
 
 ## The Tools
 You'll need soldering supplies to assemble the board and a way to program the microchip. I use the [Pocket AVR Programmer](https://www.sparkfun.com/products/9825) from SparkFun.
