@@ -11,6 +11,28 @@ related models, but YMMV.
 
 [Build It!](#the-parts-list)
 
+## Testimonials
+
+> Just received it and installed it. What an awesome little gadget! Thanks for doing this for us and sending some joy our way. It may be a small thing. But pretty awesome! *— Jennifer S.*
+
+> Works like a charm! Thanks very much again. *— Miroslav V.*
+
+> Hey- just wanted to tell you the adapter works great!  Thanks again! *— Graham L.*
+
+> Hey the adapter is installed and works great, thanks for making one for me, it's worth paying you for your ingenuity. I'm so much happier not having any remotes since I use google voice to do everything else other than volume changes. *— Enrique I.*
+
+> They work perfectly, thank you so much! *— David A.*
+
+> Received it today and it works as described. Thanks again! *— Jeremiah O.*
+
+> You’ve changed my life Jay!!!! Thank you!! *— Nathan R.*
+
+> The adapter works great! Thanks again Jay. *— Dmitrij P.*
+
+> Just got it in the mail, it's amazing!! Thank you so much! Timing was impeccable.. I literally was just looking at new speakers now I don't have to! You have no idea how happy this makes me haha *— Julie C.*
+
+> Dude, you’re a wizard! Love this thing. Who knew something so simple looking could be so helpful? Thanks again! *— Brian W.*
+
 ### How It Works
 When placed inline between the sub woofer module and the interface module, the Cinesense adapter repeatedly polls the 
 optical audio input for a signal. When a signal is sensed, the speakers are automatically turned on. The adapter will 
