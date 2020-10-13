@@ -87,14 +87,23 @@ Here are the commands that they support:
 ## The Parts List
 You'll need a few parts:
 
+### The PCB
+
 - 1x [Printed circuit board](https://oshpark.com/shared_projects/EzLrNW1y)
-- 1x [Dual sided hood](https://www.mouser.com/ProductDetail/636-957-009-010R031)
-- 1x [DB9 Male connector](https://www.mouser.com/ProductDetail/649-DEV09P064TXLF)
-- 1x [DB9 Female connector](https://www.mouser.com/ProductDetail/649-DE09S064TLF)
-- 1x [ATTINY85 microchip](https://www.mouser.com/ProductDetail/556-ATTINY85-20PU)
-- 2x [1㏁ resistors](https://www.mouser.com/ProductDetail/603-CFR-25JB-52-1M)
-- 1x [.1µF capacitor](https://www.mouser.com/ProductDetail/80-C315C104M5U)
-- 1x [2x3 header](https://www.mouser.com/ProductDetail/855-M20-9720345) (_Optional_--only needed if you plan to program the chip on the board.)
+
+### The Components
+
+Fast order: Click for a shopping cart with all the needed components
+
+[Digi-Key](https://www.digikey.com/short/znq4vb) | [Mouser](https://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=052330197b)
+
+- 1x Dual sided hood
+- 1x DB9 Male connector
+- 1x DB9 Female connector
+- 1x ATTINY85 microchip
+- 2x 1㏁ resistors
+- 1x 1µF capacitor
+- 1x 2x3 header (_Optional_--only needed if you plan to program the chip on the board.)
 
 ## The Tools
 You'll need soldering supplies to assemble the board and a way to program the microchip. I use the [Pocket AVR Programmer](https://www.sparkfun.com/products/9825) from SparkFun.
