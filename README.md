@@ -12,6 +12,8 @@ adapter that plugs into the interface module cable and adds audio sensing capabi
 
 ## What People are Saying
 
+> Amazing! Works perfectly. Didn’t expect it to auto shutoff after a couple of seconds when the source is powered off, so that’s a plus! Thanks again! *— Chris T.*
+
 > Just received it and installed it. What an awesome little gadget! Thanks for doing this for us and sending some joy our way. It may be a small thing. But pretty awesome! *— Jennifer S.*
 
 > Works like a charm! Thanks very much again. *— Miroslav V.*
