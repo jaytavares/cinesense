@@ -1,5 +1,22 @@
-## Welcome to GitHub Pages
+<form
+  action="https://formspree.io/f/xnqoonnw"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="text" name="_replyto">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
 
+  <!-- your other form fields go here -->
+
+  <button type="submit">Send</button>
+</form>
+
+## Welcome to GitHub Pages
 You can use the [editor on GitHub](https://github.com/jaytavares/cinesense/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
