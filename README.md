@@ -8,6 +8,8 @@ adapter that plugs into the interface module cable and adds audio sensing capabi
 
 \* This project is only known to work with Bose Cinemate Series II speakers. Since the Cinemate Series I speakers don't have an optical audio input, the Cinesense will not work with them at this time.
 
+[Buy One!](#buy-one)
+
 [Build It!](#the-parts-list)
 
 ## What People are Saying
@@ -85,6 +87,12 @@ Here are the commands that they support:
   - 0x5D05C03F Vol. Up
   - 0x5D0540BF Vol. Down
   - 0x5D05807F Mute
+
+## Buy One
+If you're interested in having one made for you, I can do that for you! I make a few every 2-3 weeks. The cost is $49 and includes shipping to any U.S. address. [Click here to purchase](https://py.pl/19becI).
+
+### International shipping
+If you're not in the U.S., [contact me](https://github.com/jaytavares) for a shipping quote. Typically, shipping fees to most other countries will add $15 to the price.
 
 ## The Parts List
 You'll need a few parts:
