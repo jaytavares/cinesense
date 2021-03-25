@@ -148,9 +148,10 @@
 <wire x1="37" y1="0" x2="37" y2="14.75" width="0" layer="20"/>
 <wire x1="37" y1="14.75" x2="0" y2="14.75" width="0" layer="20"/>
 <wire x1="0" y1="14.75" x2="0" y2="0" width="0" layer="20"/>
-<text x="5.8" y="13" size="1.4224" layer="21">Cinemate Audio Sense</text>
+<text x="20.6" y="0.5" size="1.4224" layer="21">Cinesense</text>
 <text x="10.2" y="0.49" size="1.016" layer="21">Jay Tavares
 March 2021</text>
+<text x="9.8" y="13.3" size="0.8128" layer="21">github.com/jaytavares/cinesense</text>
 </plain>
 <libraries>
 <library name="ATTINY85-20PU">
