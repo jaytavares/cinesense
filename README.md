@@ -99,7 +99,7 @@ You'll need a few parts:
 
 ### The PCB
 
-- 1x [Printed circuit board](https://oshpark.com/shared_projects/EzLrNW1y)
+- 1x [Printed circuit board](https://oshpark.com/shared_projects/PZXtdoM9)
 
 ### The Components
 
@@ -123,7 +123,7 @@ You'll need soldering supplies to assemble the board and a way to program the mi
 ![Assembled circuit board](.github/board.jpeg)
 
 ### Quick & Easy
-For convenience, You can purchase the board on [OSHPark](https://oshpark.com/shared_projects/EzLrNW1y).
+For convenience, You can purchase the board on [OSHPark](https://oshpark.com/shared_projects/PZXtdoM9).
 
 ### Schematic and Board layout file
 The board was designed using Eagle. If you need to make any modifications, you will find the original CAD files in the [board](./board) folder.
