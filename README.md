@@ -6,7 +6,7 @@ Do you have Bose Cinemate speakers? Do you wish they would just turn on automati
 and turn off when you're done. This project provides everything you need to do just that. Using it, you can create an
 adapter that plugs into the interface module cable and adds audio sensing capability to your Bose Cinemate speakers.*
 
-\* This project is only known to work with Bose Cinemate Series II speakers. Since the Cinemate Series I speakers don't have an optical audio input, the Cinesense will not work with them at this time.
+\* This project is only known to work with Bose Cinemate Series II speakers. Since the Cinemate Series I speakers don't have an optical audio input, the Cinesense will not work with them at this time.  (See Cinemate Series I notes toward bottom)
 
 [Buy One!](#buy-one)
 
@@ -157,6 +157,15 @@ If you would like to customize your Cinesense, you'll have to build the software
 platformio run
 ```
 This should compile the software, burn the correct fuses, and upload the software to the chip.
+
+### Cinemate Series I
+This will work somewhat with the Cinemate Series I.  While it will not sense the optical audio line (as it always remains high), it will automatically turn on your Cinemate Series I all the time, which is the impact I wanted.  You do need to change the NEC code used to send an 'On' to the Cinemate though.  I wanted to cut the traces to the Optical Input (pin 8 on both serial ports) and perhaps add a jumper from chip to pin 1 to sense audio on the Right+ channel, but I'm not an electronics expert/don't have the knowledge if that will work or not so settled for an always on situation.
+
+Unlike its big brother than uses 0x5D05 the Cinemate Series I uses 0x5DD2 as the header for NEC codes:
+  - 0x5DD232CD On/Off  -- change this in the repository code to send an 'On' to the Cinemate Series I.
+  - 0x5DD2C03F Vol. Up
+  - 0x5DD240BF Vol. Down
+  - 0x5DD2807F Mute
 
 ## Legal
 This project is licensed under the MIT License. See [LICENSE.txt](LICENSE.txt) for more information. "Bose" and "Cinemate" are registered trademarks of Bose Corporation, Framingham, MA. This project is not endorsed by or affiliated with the Bose Corporation.
