@@ -159,9 +159,11 @@ platformio run
 This should compile the software, burn the correct fuses, and upload the software to the chip.
 
 ### Cinemate Series I
-This will work somewhat with the Cinemate Series I.  While it will not sense the optical audio line (as it always remains high), it will automatically turn on your Cinemate Series I all the time, which is the impact I wanted.  You do need to change the NEC code used to send an 'On' to the Cinemate though.  I cut the traces to the Optical Input (pin 8 on both serial ports) and added a jumper from chip pin 7 to pin 6 on the serial port to sense audio on the Right+ channel, I adjusted the sensitivity of the checkSignal routine to sense a lower volume.  Things work great!  I'm happy.
+This will work somewhat with the Cinemate Series I.  While it will not sense the optical audio line, it will automatically turn on your Cinemate Series I all the time (since the optical audio is always sensed as high), which is the impact I wanted.  You do need to change the NEC code used to send an 'On' to the Cinemate though. 
 
-Unlike its big brother than uses 0x5D05 the Cinemate Series I uses 0x5DD2 as the header for NEC codes:
+If you want more full operation, I cut the traces to the Optical Input (pin 8 on both serial ports) and added a jumper from chip pin 7 to pin 6 on the serial port to sense audio on the Right+ channel, I adjusted the sensitivity of the checkSignal routine to sense a lower volume.  Things work great!  I'm happy.
+
+Unlike its big brother that uses 0x5D05 the Cinemate Series I uses 0x5DD2 as the header for NEC codes:
   - 0x5DD232CD On/Off  -- change this in the repository code to send an 'On' to the Cinemate Series I.
   - 0x5DD2C03F Vol. Up
   - 0x5DD240BF Vol. Down
