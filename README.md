@@ -6,7 +6,7 @@ Do you have Bose Cinemate speakers? Do you wish they would just turn on automati
 and turn off when you're done. This project provides everything you need to do just that. Using it, you can create an
 adapter that plugs into the interface module cable and adds audio sensing capability to your Bose Cinemate speakers.*
 
-\* This project is only known to work with Bose Cinemate Series II speakers. Since the Cinemate Series I speakers don't have an optical audio input, the Cinesense will not work with them at this time.
+\* This project only works with Bose Cinemate __Series II__ speakers. Since the Cinemate Series I speakers don't have an optical audio input, the Cinesense will not work with them.
 
 [Buy One!](#buy-one)
 
