@@ -89,7 +89,7 @@ Here are the commands that they support:
   - 0x5D05807F Mute
 
 ## Buy One
-If you're interested in having one made for you, I can do that for you! I make a few every 2-3 weeks. The cost is $49 and includes shipping to any U.S. address. [Click here to purchase](https://py.pl/1mOXSX).
+If you're interested in having one made for you, I can do that for you! I make a few every 2-3 weeks. The cost is $49 and includes shipping to any U.S. address. [Click here to purchase](https://www.paypal.com/instantcommerce/checkout/WN5G8SXXHAUVU).
 
 ### International shipping
 If you're not in the U.S., [contact me](https://github.com/jaytavares) for a shipping quote. Typically, shipping fees to most other countries will add $15 to the price.
