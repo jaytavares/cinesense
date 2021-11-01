@@ -6,7 +6,7 @@ Do you have Bose Cinemate speakers? Do you wish they would just turn on automati
 and turn off when you're done. This project provides everything you need to do just that. Using it, you can create an
 adapter that plugs into the interface module cable and adds audio sensing capability to your Bose Cinemate speakers.*
 
-\* This project is only known to work with Bose Cinemate Series II speakers. Since the Cinemate Series I speakers don't have an optical audio input, the Cinesense will not work with them at this time.  (See Cinemate Series I notes toward bottom)
+NOTE: As is, this project will only work with Bose Cinemate __Series II__ speakers. (See [Cinemate Series I notes](#Cinemate Series I) below for workaround)
 
 [Buy One!](#buy-one)
 
@@ -89,7 +89,7 @@ Here are the commands that they support:
   - 0x5D05807F Mute
 
 ## Buy One
-If you're interested in having one made for you, I can do that for you! I make a few every 2-3 weeks. The cost is $49 and includes shipping to any U.S. address. [Click here to purchase](https://py.pl/1mOXSX).
+If you're interested in having one made for you, I can do that for you! I make a few every 2-3 weeks. The cost is $49 and includes shipping to any U.S. address. [Click here to purchase](https://www.paypal.com/instantcommerce/checkout/WN5G8SXXHAUVU).
 
 ### International shipping
 If you're not in the U.S., [contact me](https://github.com/jaytavares) for a shipping quote. Typically, shipping fees to most other countries will add $15 to the price.
