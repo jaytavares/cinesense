@@ -1,4 +1,4 @@
-#include "Pins.h"
+#include "..\include\Pins.h"
 #include <Arduino.h>
 
 // pulse parameters in usec
@@ -45,5 +45,5 @@ void sendNEC(unsigned long data) {
     space(0);
 
     pinMode(IR_LINE, INPUT);
-    delay(1000);
+    // delay(1000); // removed jk. in code.
 }

@@ -6,7 +6,7 @@ Do you have Bose Cinemate speakers? Do you wish they would just turn on automati
 and turn off when you're done. This project provides everything you need to do just that. Using it, you can create an
 adapter that plugs into the interface module cable and adds audio sensing capability to your Bose Cinemate speakers.*
 
-\* This project only works with Bose Cinemate __Series II__ speakers. Since the Cinemate Series I speakers don't have an optical audio input, the Cinesense will not work with them.
+NOTE: As is, this project will only work with Bose Cinemate __Series II__ speakers. (See [Cinemate Series I notes](#cinemate-series-i) below for workaround)
 
 [Buy One!](#buy-one)
 
@@ -157,6 +157,17 @@ If you would like to customize your Cinesense, you'll have to build the software
 platformio run
 ```
 This should compile the software, burn the correct fuses, and upload the software to the chip.
+
+### Cinemate Series I
+This will work somewhat with the Cinemate Series I.  While it will not sense the optical audio line, it will automatically turn on your Cinemate Series I all the time (since the optical audio is always sensed as high), which is the impact I wanted.  You do need to change the NEC code used to send an 'On' to the Cinemate though. 
+
+If you want more full operation, I cut the traces to the Optical Input (pin 8 on both serial ports) and added a jumper from chip pin 7 to pin 6 on the serial port to sense audio on the Right+ channel, I adjusted the sensitivity of the checkSignal routine to sense a lower volume.  Things work great!  I'm happy.
+
+Unlike its big brother that uses 0x5D05 the Cinemate Series I uses 0x5DD2 as the header for NEC codes:
+  - 0x5DD232CD On/Off  -- change this in the repository code to send an 'On' to the Cinemate Series I.
+  - 0x5DD2C03F Vol. Up
+  - 0x5DD240BF Vol. Down
+  - 0x5DD2807F Mute
 
 ## Legal
 This project is licensed under the MIT License. See [LICENSE.txt](LICENSE.txt) for more information. "Bose" and "Cinemate" are registered trademarks of Bose Corporation, Framingham, MA. This project is not endorsed by or affiliated with the Bose Corporation.
