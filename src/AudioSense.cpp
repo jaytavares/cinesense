@@ -13,14 +13,24 @@
 // Audio signal must be LOW for this amount of time to be considered absent
 #define SIGNAL_THRESHOLD 100  // milliseconds
 
+// IR power on/off command
+#define POWER_COMMAND 0x5D0532CD
+
 void setup() {
 #ifdef DEBUG
     Serial.begin(115200);
 #endif
     pinMode(AUDIO_SENSE_PIN, INPUT);
-    pinMode(CONTROL_IN, INPUT);
     pinMode(CONTROL_OUT, OUTPUT);
     pinMode(IR_LINE, INPUT);
+    pinMode(CONTROL_IN, OUTPUT);
+
+    // CONTROL_IN must be held low for at least 4 seconds on power up in order to avoid locking out the speakers (see https://github.com/jaytavares/cinesense/issues/1)
+    digitalWrite(CONTROL_IN, LOW);
+    delay(4000);
+    pinMode(CONTROL_IN, INPUT);
+    // Send power command for faster initial start up
+    sendNEC(POWER_COMMAND);
 }
 
 bool powerOn() {
@@ -106,7 +116,7 @@ void loop() {
         Serial.println(stateTimer);
 #endif
         if (stateTimer >= ON_TRIGGER_TIME){
-            sendNEC(0x5D0532CD);
+            sendNEC(POWER_COMMAND);
         }
     }
 
@@ -117,7 +127,7 @@ void loop() {
         Serial.println(stateTimer);
 #endif
         if (stateTimer >= OFF_TRIGGER_TIME){
-            sendNEC(0x5D0532CD);
+            sendNEC(POWER_COMMAND);
         }
     }
 }
