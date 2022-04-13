@@ -16,23 +16,7 @@
 // IR power on/off command
 #define POWER_COMMAND 0x5D0532CD
 
-void setup() {
-#ifdef DEBUG
-    Serial.begin(115200);
-#endif
-    pinMode(AUDIO_SENSE_PIN, INPUT);
-    pinMode(CONTROL_OUT, OUTPUT);
-    pinMode(IR_LINE, INPUT);
-    pinMode(CONTROL_IN, OUTPUT);
-
-    // CONTROL_IN must be held low for at least 4 seconds on power up in order to avoid locking out the speakers (see https://github.com/jaytavares/cinesense/issues/1)
-    digitalWrite(CONTROL_IN, LOW);
-    delay(4000);
-    pinMode(CONTROL_IN, INPUT);
-    // Send power command for faster initial start up
-    sendNEC(POWER_COMMAND);
-}
-
+// Helper functions >>
 bool powerOn() {
     return analogRead(CONTROL_IN) > 50;
 }
@@ -69,11 +53,33 @@ bool checkSignal() {
     return SIG_SENSED;
 }
 
+// Initial power up
+void setup() {
+#ifdef DEBUG
+    Serial.begin(115200);
+#endif
+    pinMode(AUDIO_SENSE_PIN, INPUT);
+    pinMode(CONTROL_OUT, OUTPUT);
+    pinMode(IR_LINE, INPUT);
+    pinMode(CONTROL_IN, OUTPUT);
+
+    // Start-Up routine >>>
+
+    // CONTROL_IN must be held low for at least 4 seconds on power up in order to avoid locking out the speakers (see https://github.com/jaytavares/cinesense/issues/1)
+    digitalWrite(CONTROL_IN, LOW);
+    delay(4000);
+    pinMode(CONTROL_IN, INPUT);
+
+    // Send power command for faster initial start up.
+    sendNEC(POWER_COMMAND);
+}
+
 bool lastPowerState = false;
 bool lastSignalState = false;
 
 unsigned long stateStartTime = 0;
 
+// Main loop
 void loop() {
 
     if (ledOn()) {
