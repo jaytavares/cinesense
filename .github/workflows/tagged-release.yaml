@@ -38,3 +38,4 @@ jobs:
           prerelease: false
           files: |
             build/.pio/build/attiny85/firmware.hex
+            board/Cinesense.brd
