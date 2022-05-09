@@ -14,4 +14,4 @@ I've secured a small number of microchips! The housing I use for the adapter is 
 
 ## International shipping
 
-If you're not in the U.S., [contact me](https://github.com/jaytavares) for a shipping quote. Typically, shipping fees to most other countries will add $15 to the price.
+If you're not in the U.S., [contact me](https://github.com/jaytavares) for a shipping quote. Typically, shipping fees to most other countries will add $15 to $20 to the price.
