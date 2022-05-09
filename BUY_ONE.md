@@ -4,7 +4,7 @@
 
 🔥🔥🔥
 
-I've secured a small number of microchips! The housing I use for the adapter is backordered until the end of May, but I'm still taking orders since it's not next year like the microchips were. The price is $55 and includes shipping/handling to any US-based address. 
+I've secured a small number of microchips! The housing I use for the adapter is backordered until the end of May, but I'm still taking orders for delivery in June. The price is $55 and includes shipping/handling to any US-based address. 
 
 [Order here while supplies last!](https://www.paypal.com/instantcommerce/checkout/253NYFSKX75HA)
 
