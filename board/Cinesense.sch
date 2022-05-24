@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.1">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -1390,19 +1390,19 @@ Standard DE9 (D-Sub 9, often incorrectly referred to as DB9) serial connector. C
 <instance part="J1" gate="G$1" x="0" y="-15.24" smashed="yes">
 <attribute name="NAME" x="-5.08" y="-9.652" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="R1" gate="G$1" x="-58.674" y="16.51" smashed="yes" rot="R90">
-<attribute name="NAME" x="-60.198" y="16.51" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="-57.15" y="16.51" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+<instance part="R1" gate="G$1" x="-62.738" y="13.97" smashed="yes" rot="R90">
+<attribute name="NAME" x="-64.262" y="13.97" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="-61.214" y="13.97" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
-<instance part="R2" gate="G$1" x="-68.072" y="21.844" smashed="yes">
-<attribute name="NAME" x="-68.072" y="23.368" size="1.778" layer="95" font="vector" align="bottom-center"/>
-<attribute name="VALUE" x="-68.072" y="20.32" size="1.778" layer="96" font="vector" align="top-center"/>
+<instance part="R2" gate="G$1" x="-72.644" y="19.05" smashed="yes">
+<attribute name="NAME" x="-72.644" y="20.574" size="1.778" layer="95" font="vector" align="bottom-center"/>
+<attribute name="VALUE" x="-72.644" y="17.526" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
-<instance part="GND2" gate="1" x="-58.674" y="8.89" smashed="yes">
-<attribute name="VALUE" x="-58.674" y="8.636" size="1.778" layer="96" align="top-center"/>
+<instance part="GND2" gate="1" x="-62.738" y="6.35" smashed="yes">
+<attribute name="VALUE" x="-62.738" y="6.096" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="SUPPLY1" gate="G$1" x="-77.47" y="21.844" smashed="yes" rot="R90">
-<attribute name="VALUE" x="-80.264" y="21.844" size="1.778" layer="96" rot="R90" align="bottom-center"/>
+<instance part="SUPPLY1" gate="G$1" x="-82.042" y="19.05" smashed="yes" rot="R90">
+<attribute name="VALUE" x="-84.836" y="19.05" size="1.778" layer="96" rot="R90" align="bottom-center"/>
 </instance>
 <instance part="C1" gate="G$1" x="-53.848" y="29.21" smashed="yes" rot="R90">
 <attribute name="NAME" x="-56.769" y="30.734" size="1.778" layer="95" font="vector" rot="R90"/>
@@ -1479,18 +1479,6 @@ Standard DE9 (D-Sub 9, often incorrectly referred to as DB9) serial connector. C
 <wire x1="-40.64" y1="13.97" x2="-48.514" y2="13.97" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="MOSI" class="0">
-<segment>
-<pinref part="J1" gate="G$1" pin="4"/>
-<wire x1="10.16" y1="-15.24" x2="17.78" y2="-15.24" width="0.1524" layer="91"/>
-<label x="11.684" y="-14.986" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="U1" gate="A" pin="PB0_(MOSI/DI/SDA/AIN0/OC0A/~OC1A/AREF/PCINT0)"/>
-<wire x1="66.04" y1="29.21" x2="75.184" y2="29.21" width="0.1524" layer="91"/>
-<label x="67.31" y="29.464" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="VCC" class="0">
 <segment>
 <pinref part="J1" gate="G$1" pin="2"/>
@@ -1499,10 +1487,10 @@ Standard DE9 (D-Sub 9, often incorrectly referred to as DB9) serial connector. C
 </segment>
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="-73.152" y1="21.844" x2="-70.612" y2="21.844" width="0.1524" layer="91"/>
+<wire x1="-77.724" y1="19.05" x2="-75.184" y2="19.05" width="0.1524" layer="91"/>
 <pinref part="SUPPLY1" gate="G$1" pin="VCC"/>
-<wire x1="-73.152" y1="21.844" x2="-77.47" y2="21.844" width="0.1524" layer="91"/>
-<junction x="-73.152" y="21.844"/>
+<wire x1="-77.724" y1="19.05" x2="-82.042" y2="19.05" width="0.1524" layer="91"/>
+<junction x="-77.724" y="19.05"/>
 </segment>
 <segment>
 <pinref part="SUPPLY2" gate="G$1" pin="VCC"/>
@@ -1536,6 +1524,11 @@ Standard DE9 (D-Sub 9, often incorrectly referred to as DB9) serial connector. C
 <wire x1="48.26" y1="-10.16" x2="40.64" y2="-10.16" width="0.1524" layer="91"/>
 <label x="30.48" y="-9.652" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U1" gate="A" pin="(PCINT4/XTAL2/CLKO/OC1B/ADC2)_PB4"/>
+<wire x1="-40.64" y1="21.59" x2="-58.928" y2="21.59" width="0.1524" layer="91"/>
+<label x="-58.928" y="21.844" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="CTRL_IN" class="0">
 <segment>
@@ -1544,15 +1537,18 @@ Standard DE9 (D-Sub 9, often incorrectly referred to as DB9) serial connector. C
 <label x="-72.39" y="-17.272" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-40.132" y1="21.59" x2="-40.64" y2="21.59" width="0.1524" layer="91"/>
-<wire x1="-40.64" y1="21.59" x2="-58.674" y2="21.59" width="0.1524" layer="91"/>
-<wire x1="-58.674" y1="21.59" x2="-62.992" y2="21.844" width="0.1524" layer="91"/>
+<pinref part="U1" gate="A" pin="(PCINT5/~RESET/ADC0/DW)_PB5"/>
+<wire x1="-40.64" y1="19.05" x2="-62.738" y2="19.05" width="0.1524" layer="91"/>
+<label x="-50.546" y="19.304" size="1.778" layer="95"/>
+<wire x1="-62.738" y1="19.05" x2="-67.564" y2="19.05" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
-<junction x="-58.674" y="21.59"/>
-<pinref part="U1" gate="A" pin="(PCINT4/XTAL2/CLKO/OC1B/ADC2)_PB4"/>
-<junction x="-40.64" y="21.59"/>
 <pinref part="R2" gate="G$1" pin="2"/>
-<label x="-52.578" y="21.844" size="1.778" layer="95"/>
+<junction x="-62.738" y="19.05"/>
+</segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="5"/>
+<wire x1="-7.62" y1="-17.78" x2="-15.24" y2="-17.78" width="0.1524" layer="91"/>
+<label x="-16.51" y="-17.526" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ANALOG_LEFT+" class="0">
@@ -1565,6 +1561,16 @@ Standard DE9 (D-Sub 9, often incorrectly referred to as DB9) serial connector. C
 <pinref part="P1" gate="P" pin="6"/>
 <wire x1="63.5" y1="-12.7" x2="71.12" y2="-12.7" width="0.1524" layer="91"/>
 <label x="64.262" y="-11.938" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="A" pin="PB2_(SCK/USCK/SCL/ADC1/T0/INT0/PCINT2)"/>
+<wire x1="66.04" y1="24.13" x2="74.168" y2="24.13" width="0.1524" layer="91"/>
+<label x="66.802" y="24.384" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="3"/>
+<wire x1="-7.62" y1="-15.24" x2="-15.24" y2="-15.24" width="0.1524" layer="91"/>
+<label x="-25.4" y="-14.986" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="OPTICAL_AUDIO" class="0">
@@ -1579,14 +1585,9 @@ Standard DE9 (D-Sub 9, often incorrectly referred to as DB9) serial connector. C
 <label x="64.516" y="-17.272" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="PB2_(SCK/USCK/SCL/ADC1/T0/INT0/PCINT2)"/>
-<wire x1="66.04" y1="24.13" x2="74.168" y2="24.13" width="0.1524" layer="91"/>
-<label x="66.802" y="24.384" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="J1" gate="G$1" pin="3"/>
-<wire x1="-7.62" y1="-15.24" x2="-15.24" y2="-15.24" width="0.1524" layer="91"/>
-<label x="-25.4" y="-14.986" size="1.778" layer="95"/>
+<pinref part="U1" gate="A" pin="(PCINT3/XTAL1/CLKI/~OC1B/ADC3)_PB3"/>
+<wire x1="-40.64" y1="24.13" x2="-58.674" y2="24.13" width="0.1524" layer="91"/>
+<label x="-57.404" y="24.638" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CTRL_OUT" class="0">
@@ -1618,21 +1619,14 @@ Standard DE9 (D-Sub 9, often incorrectly referred to as DB9) serial connector. C
 <label x="-47.498" y="-20.32" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="(PCINT3/XTAL1/CLKI/~OC1B/ADC3)_PB3"/>
-<wire x1="-40.64" y1="24.13" x2="-48.006" y2="24.13" width="0.1524" layer="91"/>
-<label x="-46.99" y="24.13" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="RST" class="0">
-<segment>
-<pinref part="U1" gate="A" pin="(PCINT5/~RESET/ADC0/DW)_PB5"/>
-<wire x1="-40.64" y1="19.05" x2="-48.26" y2="19.05" width="0.1524" layer="91"/>
-<label x="-48.006" y="19.05" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="4"/>
+<wire x1="10.16" y1="-15.24" x2="17.78" y2="-15.24" width="0.1524" layer="91"/>
+<label x="11.684" y="-14.986" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="5"/>
-<wire x1="-7.62" y1="-17.78" x2="-15.24" y2="-17.78" width="0.1524" layer="91"/>
-<label x="-14.986" y="-17.78" size="1.778" layer="95"/>
+<pinref part="U1" gate="A" pin="PB0_(MOSI/DI/SDA/AIN0/OC0A/~OC1A/AREF/PCINT0)"/>
+<wire x1="66.04" y1="29.21" x2="75.184" y2="29.21" width="0.1524" layer="91"/>
+<label x="67.31" y="29.464" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
