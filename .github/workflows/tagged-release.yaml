@@ -29,7 +29,7 @@ jobs:
       - name: Install PlatformIO
         run: |
           python -m pip install --upgrade pip
-          pip install --upgrade platformio
+          pip install --upgrade platformio==6.1.0
       - name: Run PlatformIO
         run: pio ci --board=attiny85 --lib=include --project-option=platformio.ini --keep-build-dir --build-dir=build src
       - uses: "marvinpinto/action-automatic-releases@latest"
