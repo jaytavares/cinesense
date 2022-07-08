@@ -32,7 +32,7 @@ jobs:
           pip install --upgrade platformio==6.1.0
       - name: Run PlatformIO
         run: pio ci --board=attiny85 --lib=include --project-option=platformio.ini --keep-build-dir --build-dir=build src
-      - uses: "marvinpinto/action-automatic-releases@latest"
+      - uses: "marvinpinto/action-automatic-releases@v1.2.1"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
