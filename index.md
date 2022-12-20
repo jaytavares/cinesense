@@ -1,54 +1,26 @@
-<form
-  action="https://formspree.io/f/xnqoonnw"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="text" name="_replyto">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
+# Cinesense: an Audio Sensing Add-on for Bose Cinemate Speakers
 
-  <!-- your other form fields go here -->
+## Overview
 
-  <button type="submit">Send</button>
-</form>
+Do you have Bose Cinemate speakers? Do you wish they would just turn on automatically when you need them
+and turn off when you're done? Well, now they can!
 
-## Welcome to GitHub Pages
-You can use the [editor on GitHub](https://github.com/jaytavares/cinesense/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This project only works with Bose Cinemate **Series II** speakers. Since the Cinemate Series I speakers don't have an optical audio input, the Cinesense will not work with them.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Buy a Cinesense Adapter
 
-### Markdown
+🔥🔥🔥
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+I've secured a small number of microchips! For a limited time I can take orders! The price is $55 and includes shipping/handling to any US-based address.
 
-```markdown
-Syntax highlighted code block
+[Order here while supplies last!](https://www.paypal.com/instantcommerce/checkout/253NYFSKX75HA)
 
-# Header 1
-## Header 2
-### Header 3
+🔥🔥🔥
 
-- Bulleted
-- List
+International shipping
 
-1. Numbered
-2. List
+If you're not in the U.S., [contact me](https://github.com/jaytavares) for a shipping quote. Typically, shipping fees to most other countries will add $15 to $20 to the price.
 
-**Bold** and _Italic_ and `Code` text
+## Build Your Own Cinesense Adapter
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jaytavares/cinesense/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+If you're a DIYer, you can build your own Cinesense adapter. Visit the [Cinesense GitHub repository](https://github.com/jaytavares/cinesense) for more information.
