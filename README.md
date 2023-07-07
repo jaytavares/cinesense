@@ -10,7 +10,7 @@ adapter that plugs into the interface module cable and adds audio sensing capabi
 
 \* This project only works with Bose Cinemate **Series II** speakers. Since the Cinemate Series I speakers don't have an optical audio input, the Cinesense will not work with them.
 
-[Buy One! (spoiler alert: I'm no longer making them)](#buy-one)
+[Buy One!](#buy-one)
 
 [Build It!](#the-parts-list)
 
@@ -94,7 +94,7 @@ Here are the commands that they support:
 
 ## Buy One
 
-I'm sorry to say I'm no longer making these. Please keep reading if you'd like to build one yourself.
+[Click here for the latest information on availability.](./BUY_ONE.md)
 
 ## The Parts List
 
