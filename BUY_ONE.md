@@ -2,9 +2,9 @@
 
 While I am no longer building Cinesense adapters, another user has stepped up to the plate and is offering them for sale.
 
+[Order one here!](https://t.ly/MLgYi)
+
 For all assistance with purchases contact them here:
 
 - Reddit: [u/Axodude](https://www.reddit.com/user/Axodude/)
 - GitHub: [johnrstillwell](https://github.com/johnrstillwell)
-
-[Order here!](https://t.ly/MLgYi)
