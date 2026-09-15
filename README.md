@@ -132,7 +132,9 @@ For convenience, You can purchase the board on [OSHPark](https://oshpark.com/sha
 
 ### Schematic and Board layout file
 
-The board was designed using Eagle. If you need to make any modifications, you will find the original CAD files in the [board](./board) folder.
+The board was originally designed in EAGLE CAD, but Autodesk has discontinued EAGLE and the files are now best viewed in Fusion. If you need to inspect or modify the design, you will find the original CAD files in the [board](./board) folder.
+
+For convenience, viewable schematic files have been included in the [schematic](./schematic) folder for anyone who does not have access to Fusion.
 
 ### Assembly
 
