@@ -2,9 +2,11 @@
 #define CINEMATE_PINS_H
 
 // Pins for ATTINY85
-#define AUDIO_SENSE_PIN A1
-#define CONTROL_IN A2
+#define ANALOG_AUDIO_L_SENSE_PIN A1
+#define ANALOG_AUDIO_R_SENSE_PIN A2
+#define DIGITAL_AUDIO_SENSE_PIN A3
+#define CONTROL_IN A0
 #define CONTROL_OUT 1
-#define IR_LINE 3
+#define IR_LINE 0
 
 #endif //CINEMATE_PINS_H

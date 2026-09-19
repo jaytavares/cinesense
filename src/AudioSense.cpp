@@ -39,7 +39,7 @@ bool checkSignal() {
     // Check for audio signal
     unsigned long startTime = millis();
     while (millis() - startTime < SIGNAL_THRESHOLD) {
-        if (analogRead(AUDIO_SENSE_PIN) > 100) {
+        if (analogRead(DIGITAL_AUDIO_SENSE_PIN) > 100) {
             // A signal was sensed for longer than the threshold setting
             SIG_SENSED = true;
         }
@@ -58,7 +58,9 @@ void setup() {
 #ifdef DEBUG
     Serial.begin(115200);
 #endif
-    pinMode(AUDIO_SENSE_PIN, INPUT);
+    pinMode(DIGITAL_AUDIO_SENSE_PIN, INPUT);
+    pinMode(ANALOG_AUDIO_L_SENSE_PIN, INPUT);
+    pinMode(ANALOG_AUDIO_R_SENSE_PIN, INPUT);
     pinMode(CONTROL_OUT, OUTPUT);
     pinMode(IR_LINE, INPUT);
     pinMode(CONTROL_IN, OUTPUT);
